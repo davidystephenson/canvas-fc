@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect, useCallback, MouseEvent } from 'react'
 
-export default function App ({ width, height, draw, onClick, className }: {
+export default function CanvasFC ({ width, height, draw, onClick, className }: {
   width?: number
   height?: number
   draw?: (canvasContext: CanvasRenderingContext2D) => void

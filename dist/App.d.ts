@@ -1,6 +1,6 @@
 import { MouseEvent } from 'react';
 
-declare function App({ width, height, draw, onClick, className }: {
+declare function CanvasFC({ width, height, draw, onClick, className }: {
     width?: number;
     height?: number;
     draw?: (canvasContext: CanvasRenderingContext2D) => void;
@@ -11,4 +11,4 @@ declare function App({ width, height, draw, onClick, className }: {
     className?: string;
 }): JSX.Element;
 
-export { App as default };
+export { CanvasFC as default };
