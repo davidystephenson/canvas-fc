@@ -1,6 +1,6 @@
 import { MouseEvent } from 'react';
 
-declare function CanvasFc({ width, height, draw, onClick, className }: {
+interface CanvasFcProps {
     width?: number;
     height?: number;
     draw?: (canvasContext: CanvasRenderingContext2D) => void;
@@ -9,6 +9,7 @@ declare function CanvasFc({ width, height, draw, onClick, className }: {
         canvas: HTMLCanvasElement;
     }) => void;
     className?: string;
-}): JSX.Element;
+}
+declare function CanvasFc({ width, height, draw, onClick, className }: CanvasFcProps): JSX.Element;
 
-export { CanvasFc as default };
+export { CanvasFcProps, CanvasFc as default };
