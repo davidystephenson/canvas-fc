@@ -1,12 +1,14 @@
 import React, { useRef, useState, useEffect, useCallback, MouseEvent } from 'react'
 
-export default function CanvasFc ({ width, height, draw, onClick, className }: {
+export interface CanvasFcProps {
   width?: number
   height?: number
   draw?: (canvasContext: CanvasRenderingContext2D) => void
   onClick?: ({ event, canvas }: { event: MouseEvent, canvas: HTMLCanvasElement }) => void
   className?: string
-}): JSX.Element {
+}
+
+export default function CanvasFc ({ width, height, draw, onClick, className }: CanvasFcProps): JSX.Element {
   const [canvasContext, setCanvasContext] = useState<CanvasRenderingContext2D | null>(null)
 
   const handleClick = useCallback((event: MouseEvent) => {
