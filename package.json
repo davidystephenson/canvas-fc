@@ -1,6 +1,6 @@
 {
   "name": "canvas-fc",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
